@@ -11,6 +11,7 @@
   --bg_text: #4a4a4a;
   --bg_text_transparent: rgb(74, 74, 74, 0.5);
   --card_margin: 1rem;
+  --screen_padding: 0.4rem;
 }
 /* /general */
 
@@ -25,7 +26,7 @@ main {
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
-  padding: 0.4rem;
+  padding: var(--screen_padding);
   list-style: none;
 }
 .elemento_top ul li {
@@ -36,7 +37,7 @@ main {
 .elemento_top ul li:first-child {
   text-transform: capitalize;
 }
-.container {
+main .container {
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -60,3 +61,48 @@ main {
   text-transform: capitalize;
 }
 /* /main */
+
+/* footer */
+footer {
+  width: 100vw;
+  height: 12vh;
+  background-color: var(--bg_footer_color);
+}
+footer .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: var(--screen_padding);
+}
+.elemento {
+  display: flex;
+  gap: 1rem;
+}
+.icona {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--light_text);
+}
+.icona > i {
+  font-size: 1.2rem;
+}
+.icona > div {
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+.fine {
+  display: flex;
+  flex-grow: 1;
+  background-color: var(--bg_text);
+}
+.fine > div {
+  font-size: 1.2rem;
+  color: red;
+  padding: 0 1.5rem;
+}
+/* /footer */
