@@ -1,0 +1,62 @@
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg_main_color: black;
+  --bg_footer_color: #222222;
+  --light_text: white;
+  --bg_text: #4a4a4a;
+  --bg_text_transparent: rgb(74, 74, 74, 0.5);
+  --card_margin: 1rem;
+}
+/* /general */
+
+/* main */
+main {
+  width: 100vw;
+  height: 88vh;
+  background-color: var(--bg_main_color);
+  color: var(--light_text);
+}
+.elemento_top ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.4rem;
+  list-style: none;
+}
+.elemento_top ul li {
+  background-color: var(--bg_text);
+  border-radius: 6px;
+  padding: 0.3rem;
+}
+.elemento_top ul li:first-child {
+  text-transform: capitalize;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--card_margin);
+}
+.card {
+  width: calc((100% - var(--card_margin) - (var(--card_margin) * 5)) / 7);
+  position: relative;
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+.card .nome {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg_text_transparent);
+  padding: 0.3rem;
+  text-transform: capitalize;
+}
+/* /main */
